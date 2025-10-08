@@ -1,0 +1,11 @@
+AWSで VPC / ALB / ECS / ECR / RDS (PostgreSQL) を使い、Webアプリ用インフラを構築する Terraform コードを生成してください。
+
+要件:
+- Terraform v1.9 に対応
+- AWSリージョン: ap-northeast-1
+- AWSプロファイル: "terraform-mcp-test"
+- セキュリティ（暗号化・最小権限・Private Subnet配置）・コスト・保守性を考慮してください。
+- 必要であれば variables.tf や outputs.tf、modules ディレクトリなども生成して構いません。
+- 各ファイルの先頭にファイル名をコメントとして示してください（例: # main.tf）。
+- コード以外の説明文やMarkdownフェンス( ``` )は禁止です。
+- 承認を求めず、Terraformコードをterraform1ディレクトリに出力してください。

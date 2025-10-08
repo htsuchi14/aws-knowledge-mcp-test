@@ -1,0 +1,30 @@
+# terraform.tfvars.example
+aws_region  = "ap-northeast-1"
+aws_profile = "terraform-mcp-test"
+
+environment  = "production"
+project_name = "webapp"
+
+vpc_cidr           = "10.0.0.0/16"
+availability_zones = ["ap-northeast-1a", "ap-northeast-1c"]
+
+app_port           = 8080
+health_check_path  = "/health"
+certificate_arn    = ""
+
+enable_deletion_protection = false
+
+db_engine_version       = "16.3"
+db_instance_class       = "db.t4g.micro"
+db_allocated_storage    = 20
+db_max_allocated_storage = 100
+db_name                 = "appdb"
+db_username             = "dbadmin"
+db_password             = "CHANGEME_SecurePassword123!"
+db_multi_az             = true
+
+ecs_task_cpu      = "256"
+ecs_task_memory   = "512"
+ecs_desired_count = 2
+ecs_min_capacity  = 2
+ecs_max_capacity  = 10
