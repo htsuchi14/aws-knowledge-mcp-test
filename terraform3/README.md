@@ -95,3 +95,16 @@ terraform destroy
   - RDS deletion_protection有効化
   - より大きなインスタンスタイプ
   - バックアップ保持期間の延長
+
+## トラブルシューティング
+
+### `terraform apply`でECRリポジトリが見つからない場合
+
+ECSタスク定義内のECRリポジトリ参照は、`terraform apply`後に出力される
+`ecr_repository_url`を使って更新してください。ECRへのログインと
+イメージプッシュが完了していない場合は、デプロイが失敗します。
+
+### ALBのヘルスチェックが失敗する場合
+
+- コンテナポートと`container_port`変数が一致しているか確認してください。
+- セキュリティグループのALB→ECS通信が許可されているか確認してください。
